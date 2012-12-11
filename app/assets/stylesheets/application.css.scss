@@ -28,6 +28,13 @@ body {
   height: 70px;
   color: white;
 
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
   h1 {
     padding: 20px;
     padding-left: 0px;
