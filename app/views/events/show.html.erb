@@ -1,4 +1,4 @@
 <h1> <%= @event.title %> </h1>
 <p>
-  <%= @event.content %>
+  <%= markdown(@event.content) %>
 </p>
