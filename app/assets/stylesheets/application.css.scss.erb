@@ -23,6 +23,13 @@ body {
     color: $main-color;
   }
 }
+a {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
 .container {
   width: $container-width;
   margin: 0 auto;
@@ -59,4 +66,51 @@ h2 {
   margin: 1em 0 0.5em;
   font-family: inherit;
   text-rendering: optimizelegibility;
+}
+
+ul.home {
+  list-style: none;
+  li {
+    vertical-align: middle;
+    padding: 1.5em 0;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    i {
+      display: inline-block;
+      width: 120px;
+      height: 30px;
+      background-color: #D0D0D0;
+      float: left;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 1em;
+      color: white;
+      line-height: 30px;
+      font-style: normal;
+      font-weight: bold;
+      border-radius: 70px;
+      -webkit-transition: 0.10s background-color ease-in;
+      -moz-transition: 0.10s background-color ease-in;
+    }
+    h3 {
+      height: 30px;
+      margin: 0;
+      margin-left: 130px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      font-size: 26px;
+      color: $main-color;
+    }
+    &:hover {
+      i {
+        background-color: $main-color;
+        transition: 0.10s background-color ease-in;
+        -webkit-transition: 0.10s background-color ease-in;
+        -moz-transition: 0.10s background-color ease-in;
+      }
+      h3 {
+         text-decoration: underline;
+      }
+    }
+  }
 }

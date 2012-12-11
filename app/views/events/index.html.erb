@@ -16,15 +16,19 @@
 </div>
 
 <h2> All Events </h2>
-<% if !@events.empty? %>
-  <ul>
-  <% @events.each do |event| %>
-    <li> <%= link_to event.title, event %> </li>
+<ul class="home">
+  <% if !@events.empty? %>
+    <% @events.each do |event| %>
+      <li>
+      <a href="/events/<%= event.id %>">
+        <i><%= event.time.to_date %> </i>
+        <h3><%= event.title %></h3>
+      </a>
+      </li>
+    <% end %>
+  <% else %>
+    <p>
+    No Events found
+    </p>
   <% end %>
-  </ul>
-<% else %>
-  <p>
-  No Events found
-  </p>
-<% end %>
-
+</ul>
