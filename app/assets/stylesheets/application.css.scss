@@ -9,5 +9,29 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
  */
+
+@import 'event';
+
+$container-width: 960px;
+
+body {
+  margin: 0;
+}
+.container {
+  width: $container-width;
+  margin: 0 auto;
+}
+
+.navbar {
+  background-color: green;
+  height: 70px;
+  color: white;
+
+  h1 {
+    padding: 20px;
+    padding-left: 0px;
+    color: white;
+    margin: 0;
+  }
+}
