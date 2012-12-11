@@ -14,9 +14,14 @@
 @import 'event';
 
 $container-width: 960px;
+$main-color: green;
 
 body {
   margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  a {
+    color: $main-color;
+  }
 }
 .container {
   width: $container-width;
@@ -41,4 +46,17 @@ body {
     color: white;
     margin: 0;
   }
+}
+
+.hero {
+  padding: 20px 320px 20px 0;
+  background: url(<%= asset_path 'hero.png' %>) right 40px no-repeat;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 2em;
+  margin: 1em 0 0.5em;
+  font-family: inherit;
+  text-rendering: optimizelegibility;
 }

@@ -1,7 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to "create_new_event", new_event_path %>
-<h1> All Events </h1>
+<div class="hero">
+  <p>
+    We meet every sunday afternoon to talk about <b>Web development</b>, and have fun, join us, don't be shy.
+  </p>
+
+  <p class="hero-links">
+    <%= link_to "create_new_event", new_event_path %>
+    <br>
+    <%= link_to "about_us", "#" %>
+    <br>
+    <%= link_to "join_us", "#" %>
+    <br>
+  </p>
+</div>
+
+<h2> All Events </h2>
 <% if !@events.empty? %>
   <ul>
   <% @events.each do |event| %>
