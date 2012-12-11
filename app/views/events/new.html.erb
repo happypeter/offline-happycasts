@@ -1,1 +1,12 @@
-need a form here
+<%= form_for @event do |f| %>
+ <%= f.label :title %>
+ <br>
+ <%= f.text_field :title %>
+ <br>
+ <%= f.label :content %>
+ <br>
+ <%= f.text_area :content %>
+ <br>
+ <%= f.submit "create_event" %>
+<% end %>
+
