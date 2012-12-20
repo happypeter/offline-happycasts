@@ -15,3 +15,11 @@
 http://offline.happycasts.net
 
 用于实际应用。课上我会现场带大家一行一行的写这个项目。
+
+
+### 关于本 repo
+
+这里的代码我会分成最小的功能单元，每一个小功能用一个 commit 来完成，同时在
+commit message 中注明操作步骤和参考资料等等。例如
+
+https://github.com/happypeter/offline-happycasts/commit/521e4867116c0a8f54cdf59b9e378fe15abb0f96
