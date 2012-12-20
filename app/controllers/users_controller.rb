@@ -36,4 +36,10 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def logout
+    cookies.delete(:token)
+    redirect_to root_url, :notice => "You have been logged out."
+  end
+
+
 end
