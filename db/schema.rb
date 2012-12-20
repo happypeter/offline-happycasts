@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121220030551) do
+ActiveRecord::Schema.define(:version => 20121220041516) do
 
   create_table "events", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20121220030551) do
     t.string   "email"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "token"
   end
 
 end
