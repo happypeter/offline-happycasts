@@ -14,15 +14,17 @@
   </div>
 
   <div class="container">
-      <ul class="nav">
+    <div class="sub-nav">
+      <ul>
         <% if current_user %>
-          <li>Logged in as: <%= link_to current_user.name, user_path(current_user) %></li>
+          <li><%= link_to current_user.name, user_path(current_user) %></li>
           <li><%= link_to "logout", logout_path %></li>
         <% else %>
           <li><%= link_to "signup", signup_path %> </li>
           <li><%= link_to "login", login_path %></li>
         <% end %>
       </ul>
+    </div>
     <%= yield %>
   </div>
 </body>
