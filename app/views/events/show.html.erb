@@ -1,4 +1,7 @@
 <h1> <%= @event.title %> </h1>
+<% if current_user && current_user.admin? %>
+  <%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
 <p>
   <%= markdown(@event.content) %>
 </p>
