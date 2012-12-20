@@ -1,0 +1,33 @@
+<div class="container">
+  <h1>Sign Up</h1>
+
+  <%= form_for @user do |f| %>
+    <% if @user.errors.any? %>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :in_beijing? %>
+      <br>
+      <%= f.label :yes %>
+      <%= f.radio_button(:in_beijing, "true") %>
+      <%= f.label :no %>
+      <%= f.radio_button(:in_beijing, "false") %>
+    </div>
+    <div class="actions"><%= f.submit "Sign Up" %></div>
+  <% end %>
+</div>
