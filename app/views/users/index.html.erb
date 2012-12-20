@@ -1,0 +1,44 @@
+<div id="user_no">
+  总共有<%= @users.count %> 个用户
+</div>
+
+<table>
+  <tr>
+     <th>Name</th>
+     <th>Email</th>
+     <th>In_Beijing?</th>
+     <th>Admin?</th>
+  </tr>
+<% if !@users.empty? %>
+  <% @users.each do |user| %>
+  <p>
+    <tr>
+      <td>
+          <%= link_to user.name, user %>
+      </td>
+      <td>
+        <%= user.email %>
+      </td>
+      <td>
+        <% if user.in_beijing? %>
+          Yes
+        <% else %>
+          No
+        <% end %>
+      </td>
+      <td>
+        <%if user.admin? %>
+          YES
+        <% else %>
+          NO
+        <% end %>
+      </td>
+     </tr>
+  </p>
+  <% end %>
+<% else %>
+  <p>
+  No user found
+  </p>
+<% end %>
+</table>
