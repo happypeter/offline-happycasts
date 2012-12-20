@@ -1,0 +1,17 @@
+<div id="user_show" class="container">
+  <div id="user_name">
+    Name: <%= @user.name %>
+  </div>
+  <div id="user_email">
+    Email: <%= @user.email %>
+  </div>
+  <div id="in_beijing">
+    In Beijing:
+    <% if @user.in_beijing? %>
+      Yes
+    <% else %>
+      No
+    <% end %>
+  </div>
+</div><!-- user_show -->
+

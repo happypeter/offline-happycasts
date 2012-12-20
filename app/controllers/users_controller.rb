@@ -5,9 +5,13 @@ class UsersController < ApplicationController
   def create
     user = User.new(params[:user])
     if user.save
-      redirect_to :root
+      redirect_to user_path(user)
     else
       render "signup"
     end
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 end
