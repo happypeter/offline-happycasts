@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<% if current_user %>
+  login as: <%= link_to current_user.name, user_path(current_user) %>
+<% end %>
+
 <div class="hero">
   <p>
     We meet every sunday afternoon to talk about <b>Web development</b>, and have fun, join us, don't be shy.
