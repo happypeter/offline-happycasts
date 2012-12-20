@@ -10,21 +10,24 @@
       </div>
     <% end %>
     <div class="field">
-      <%= f.label :name %><br />
+      <%= f.label :name %>（英文小写无空格）<br />
       <%= f.text_field :name %>
     </div>
+      <br>
     <div class="field">
       <%= f.label :email %><br />
       <%= f.text_field :email %>
     </div>
+      <br>
     <div class="field">
-      <%= f.label :in_beijing? %>
+      是否身在北京？在北京的同学会收到线下活动通知
       <br>
       <%= f.label :yes %>
       <%= f.radio_button(:in_beijing, "true") %>
       <%= f.label :no %>
       <%= f.radio_button(:in_beijing, "false") %>
     </div>
+      <br>
     <div class="actions"><%= f.submit "Submit Info" %></div>
   <% end %>
 
