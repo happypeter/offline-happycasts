@@ -1,0 +1,15 @@
+<% if notice %>
+  <p style="color: red"><%= notice %> </p>
+<% end %>
+
+<h1>Please login</h1>
+
+<%= form_tag login_path do -%>
+  <%= label_tag :name_or_email, "Name:" %> <br \>
+  <%= text_field_tag :name_or_email, params[:name_or_email] %> <br \>
+
+  <%= label_tag :password, "Password:" %> <br \>
+  <%= password_field_tag :password, params[:passowrd] %> <br \>
+
+  <%= submit_tag "Login" %>
+<% end %>
