@@ -7,3 +7,24 @@
 <p>
   <%= markdown(@event.content) %>
 </p>
+
+<b>
+  ----------------------------------------------------<br \>
+  comments: <br \>
+</b>
+<div class="comment_show">
+  <% @event.comments.each do |comment| %>
+    <dl>
+      <dt> <%= comment.user.name %>: </dt>
+      <dd> <%= comment.content %> </dd>
+    </dl>
+    <p>---------------------------------------------------- </p>
+  <% end %>
+</div>
+
+<div class="comment_add">
+  <%= form_for([@event, @event.comments.build]) do |f| %>
+    <%= f.text_area :content, rows: 4 %> <br \>
+    <%= f.submit %>
+  <% end %>
+</div>

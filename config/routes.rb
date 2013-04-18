@@ -1,6 +1,9 @@
 Offline::Application.routes.draw do
-  resources :events
-  resources :users
+
+  resources :events, :users do
+    resources :comments
+  end
+
   match "user_login" => "users#login"
   match "login" => "users#login_form"
   match "about" => "info#about"

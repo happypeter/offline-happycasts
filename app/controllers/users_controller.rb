@@ -7,7 +7,8 @@ class UsersController < ApplicationController
     user = User.new(params[:user])
     if user.save
       cookies.permanent[:token] = user.token
-      redirect_to user_path(user)
+      redirect_to_forward user
+      # redirect_to user_path(user)
     else
       render "signup"
     end
@@ -25,7 +26,8 @@ class UsersController < ApplicationController
     user = User.find_by_name(params[:name])
     if user
       cookies.permanent[:token] = user.token
-      redirect_to :root
+      redirect_to_forward user
+      # redirect_to :root
     else
       flash.alert = "Invalid name or password"
       redirect_to :action => "login_form"
