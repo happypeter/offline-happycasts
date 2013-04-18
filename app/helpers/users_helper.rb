@@ -4,6 +4,10 @@ module UsersHelper
     @current_user ||= User.find_by_token(cookies[:token]) if cookies[:token]
   end
 
+  def current_user?(user)
+    user == current_user
+  end
+
   def logined_user?
     !current_user.nil?
   end
@@ -16,6 +20,7 @@ module UsersHelper
     redirect_to(session[:forward_to] || default )
     session.delete(:forward_to)
   end
+
   def have_logined_user
     unless logined_user?
       store_forward_page
