@@ -16,7 +16,7 @@
   <% @event.comments.each do |comment| %>
     <dl>
       <dt> <%= comment.user.name %>: </dt>
-      <dd> <%= comment.content %> </dd>
+      <dd> <%= markdown(comment.content) %></dd>
     </dl>
     <p>---------------------------------------------------- </p>
   <% end %>
