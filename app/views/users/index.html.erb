@@ -42,3 +42,8 @@
   </p>
 <% end %>
 </table>
+
+<% if current_user.admin? %>
+<%= button_to 'send mail', new_sendmail_path, method: :get %>
+<% end %>
+
