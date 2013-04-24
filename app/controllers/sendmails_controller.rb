@@ -6,7 +6,7 @@ class SendmailsController < ApplicationController
 
   def sendmail
 
-    @mail = Sendmail.new
+    @mail = Sendmail.new(params[:sendmail])
 
     if @mail.save
       User.all.each do |user|

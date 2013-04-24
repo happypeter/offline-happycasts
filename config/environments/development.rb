@@ -36,7 +36,21 @@ Offline::Application.configure do
   config.assets.debug = true
 
   #email
+
   config.action_mailer.delivery_method = :sendmail
   config.action_mailer.default_url_options  = { :host => "localhost:3000" }
+
+  # config.action_mailer.default_url_options  = { :host => "localhost:3000" }
+
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   :address              => "smtp.gmail.com",
+  #   :port                 => 587,
+  #   :domain               => 'gmail.com',
+  #   :user_name            => 'seventanyb',
+  #   :password             => 'secret',
+  #   :authentication       => 'plain',
+  #   :enable_starttls_auto => true
+  # }
 
 end
