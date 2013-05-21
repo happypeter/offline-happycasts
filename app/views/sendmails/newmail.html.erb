@@ -1,0 +1,9 @@
+<%= form_for(@sendmail) do |f| %>
+
+  <%= f.label :subject %> <br \>
+  <%= f.text_field :subject %> <br \>
+  <%= f.label :content %><br \>
+  <%= f.text_area :content, rows: 4 %> <br \>
+  <br \>
+  <%= f.submit %>
+<% end %>

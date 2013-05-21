@@ -6,7 +6,7 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class='<%= controller.controller_name %>'>
   <div class="navbar">
     <div class="container">
       <h1> <%= link_to "Happycasts Offline", :root %></h1>
@@ -19,7 +19,7 @@
         <% if current_user %>
           <li><%= link_to current_user.name, user_path(current_user) %></li>
           <li><%= link_to "logout", logout_path %></li>
-          <!-- <li><%= link_to "users", users_path %></li> -->
+          <li><%= link_to "users", users_path %></li>
         <% else %>
           <li><%= link_to "signup", signup_path %> </li>
           <li><%= link_to "login", login_path %></li>
