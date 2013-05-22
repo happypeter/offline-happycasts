@@ -6,7 +6,7 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class='<%= controller.controller_name %>'>
   <div class="navbar">
     <div class="container">
       <h1> <%= link_to "Happycasts Offline", :root %></h1>

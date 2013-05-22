@@ -1,30 +1,34 @@
-<h1> <%= @event.title %> </h1>
-日期: <i><%= @event.time.to_date %> </i>
-<% if current_user && current_user.admin? %>
-  <%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'Are you sure?' } %>
-  <%= link_to 'Edit', edit_event_path(@event) %>
-<% end %>
-<p>
-  <%= markdown(@event.content) %>
-</p>
 
-<b>
-  ----------------------------------------------------<br \>
-  comments: <br \>
-</b>
-<div class="comment_show">
+<div class="event_container">
+
+  <div class="event_main">
+    <div class="event_title">
+      <h1> <%= @event.title %> </h1>
+      <i>日期: <%= @event.time.to_date %> </i>
+    </div>
+    <% if current_user && current_user.admin? %>
+      <%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Edit', edit_event_path(@event) %>
+    <% end %>
+
+    <p> <%= markdown(@event.content) %> </p>
+  </div>
+
   <% @event.comments.each do |comment| %>
-    <dl>
-      <dt> <%= comment.user.name %>: </dt>
-      <dd> <%= markdown(comment.content) %></dd>
-    </dl>
-    <p>---------------------------------------------------- </p>
-  <% end %>
-</div>
+    <div class="comment_show">
+      <div class='create_info'> 
+        <span><b><%= comment.user.name %></b> commented</span>
 
-<div class="comment_add">
-  <%= form_for([@event, @event.comments.build]) do |f| %>
-    <%= f.text_area :content, rows: 4 %> <br \>
-    <%= f.submit %>
+        <span class='created_time'><%= comment.created_at %></span></p>
+      </div>
+      <p> <%= markdown(comment.content) %> </p>
+    </div>
   <% end %>
+
+  <div class="comment_add">
+    <%= form_for([@event, @event.comments.build]) do |f| %>
+      <%= f.text_area :content, rows: 4, cols: 60; %> <br \>
+      <%= f.submit %>
+    <% end %>
+  </div>
 </div>
