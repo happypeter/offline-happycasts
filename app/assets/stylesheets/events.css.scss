@@ -97,6 +97,11 @@
       background-repeat: repeat-x;
       border-color: #5ca941;
 
+      &:hover {
+        background: #20b044;
+        color: #eee;
+      }
+
     }
   }
 

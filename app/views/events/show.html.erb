@@ -29,7 +29,7 @@
     <b>Comment:</b>
     <div class="leave-comments-box">
       <%= form_for([@event, @event.comments.build]) do |f| %>
-        <%= f.text_area :content, rows: 4, cols: 133; %> <br \>
+        <%= f.text_area :content, rows: 4, cols: 133, placeholder: 'Leave a messege'%> <br \>
         <%= f.submit 'Submit', class: 'btn-submit' %>
       <% end %>
     </div>
