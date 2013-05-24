@@ -15,7 +15,7 @@
 
   <% @event.comments.each do |comment| %>
     <div class="boxed-group">
-      <h3><%= comment.user.name %> <span class='comment-by'> by commented</span> <span class='box-created'> <%= time_ago_in_words(comment.created_at) %></span> </h3>
+      <h3><%= comment.user.name %> <span class='comment-by'> by commented</span> <span class='box-created'> <%= time_ago_in_words(comment.created_at) %> ago </span> </h3>
 
 
       <div class="boxed-group-inner markdown-body">
