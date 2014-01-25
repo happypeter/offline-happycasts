@@ -1,21 +1,17 @@
 class CommentsController < ApplicationController
-  before_filter :have_logined_user
-
-  def index
-    @event = Event.find(params[:event_id])
-    redirect_to @event
-  end
-
   def create
-    user = current_user
-    @event = Event.find(params[:event_id])
-    @comment = @event.comments.build(user_id: user.id, content: params[:comment][:content])
+    @issue = Issue.find(params[:issue_id])
+    @comment = @issue.comments.build(user_id: current_user.id, content: comment_params[:content])
 
     if @comment.save
-      redirect_to @comment.event
+      redirect_to @comment.issue
     else
-      redirect_to @event, notice: 'Add comment error!'
+      redirect_to @issue, notice: 'Add comment error!'
     end
   end
 
+  private
+   def comment_params
+     params.require(:comment).permit!
+   end
 end

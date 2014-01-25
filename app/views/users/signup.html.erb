@@ -1,4 +1,37 @@
-<div class="container">
-  <h1>Sign Up</h1>
-  <%= render "form" %>
+<div class="signup-form-container clearfix">
+  <div class="signup-form">
+    <%= form_for @user do |f| %>
+        <% if @user.errors.any? %>
+          <div class="form-errorred">
+            填写的信息有误
+          </div>
+        <% end %>
+        <dl class="form">
+          <dt><%= f.label :name %></dt>
+          <dd><%= f.text_field :name %></dd>
+          <% if @user.errors[:name].any? %>
+            <dd class="error"><%= @user.errors[:name][0] %></dd>
+          <% end %>
+        </dl>
+        <dl class="form">
+          <dt> <%= f.label :email %></dt>
+          <dd> <%= f.text_field :email %> </dd>
+          <% if @user.errors[:email].any? %>
+            <dd class="error"><%= @user.errors[:email][0] %></dd>
+          <% end %>
+        </dl>
+        <dl class="form">
+          <dt> <%= f.label :password %> </dt>
+          <dd> <%= f.password_field :password %> </dd>
+          <% if @user.errors[:password].any? %>
+            <dd class="error"><%= @user.errors[:password][0] %></dd>
+          <% end %>
+        </dl>
+        <dl class="form">
+          <dt> <%= f.label :password_confirmation %> </dt>
+          <dd> <%= f.password_field :password_confirmation %> </dd>
+        </dl>
+        <p><%= f.submit "注册", :class => "signup-button" %></p>
+    <% end %>
+  </div>
 </div>

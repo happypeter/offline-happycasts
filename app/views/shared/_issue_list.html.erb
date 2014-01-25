@@ -1,0 +1,20 @@
+<ul class="issue-list">
+  <% issues.each do |i| %>
+    <li class="issue">
+      <div class="avatar">
+        <%= link_to i.user do %>
+          <img src=<%= i.user.avatar %> alt="">
+        <% end %>
+      </div>
+      <h3 class="issue-title">
+        <%= link_to i.title, issue_path(i) %>
+      </h3>
+      <p class="issue-snippet">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, voluptas.
+      </p>
+      <div class="meta-data">
+        happypeter posted on yesterday, 5 comments
+      </div>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,44 @@
+@import "globals/variables";
+.page {
+  background: #E9E9E9;
+}
+
+.header {
+  background: $brand-green;
+  line-height: 70px;
+  .logo {
+    width: 200px;
+    float: left;
+  }
+  .header-logo-wordmark {
+    width: 100px;
+    float: left;
+  }
+  a {
+    color: white;
+    display: block;
+    padding: 0 18px;
+    &:hover {
+      color: darken($brand-green, 10%);
+    }
+  }
+}
+
+.nav {
+  float: right;
+  li {
+    float: left;
+    a {
+      img {
+        float: left;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin: 20px 5px;
+      }
+    }
+    .sign-out {
+      font-size: 20px;
+    }
+  }
+}

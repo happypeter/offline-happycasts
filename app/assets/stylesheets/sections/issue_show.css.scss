@@ -1,0 +1,124 @@
+@import "globals/variables";
+
+
+// main post here
+.issue-author {
+  text-align: center;
+}
+.issue-author-avatar {
+  margin-top: -60px;
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 500;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  .issue-author-avatar-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+  }
+}
+
+.issue-state {
+  float: right;
+  margin-top: -40px;
+  margin-right: 20px;
+  .btn-switch {
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+    .active a{
+      opacity: 1;
+      background: #57AD68;
+      color: #FFF;
+      padding: 14px;
+    }
+  }
+}
+.issue-body {
+   position: relative;
+   padding: 20px;
+   height: auto;
+   border-radius: 3px;
+   background: white;
+   color: #9d9d9d;
+   &:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    top: -20px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid white;
+  }
+  .issue-body-title {
+    color:green;
+  }
+  .issue-meta-data {
+    a {
+     color: $link-gray;
+    }
+    color: $link-gray;
+  }
+  .issue-content {
+    margin-top: 20px;
+  }
+}
+
+
+// comments start here
+.comment-list {
+  margin-top: 20px;
+}
+.comment {
+  padding: 30px 15px;
+  width: 80%;
+  margin: auto;
+  .date-time {
+    font-weight: 400;
+    color: #9d9d9d;
+    margin-bottom: 10px;
+  }
+  .message {
+    position: relative;
+    padding: 20px;
+    height: auto;
+    border-radius: 3px;
+    background: white;
+    color: #9d9d9d;
+    .avatar {
+      border-radius: 50%;
+      width: auto;
+      max-width: 99px;
+      height: auto;
+      float: left;
+      display: block;
+      margin-right: 10px;
+    }
+  }
+  .message:before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid white;
+  }
+  textarea {
+    border: 0;
+    outline: 0;
+  }
+}

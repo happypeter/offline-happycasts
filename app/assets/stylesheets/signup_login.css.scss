@@ -1,0 +1,40 @@
+@import "globals/variables";
+
+.signup-form-container, .login-form-container{
+  width: 400px;
+  margin: 60px auto;
+  background: #fff;
+  .signup-form, .login-form {
+    width: 250px;
+    margin: 20px auto;
+  }
+}
+
+
+.need-signup{
+  margin: 10px 0;
+  float: right;
+  color: $link-gray;
+}
+
+.signup-button, .login-button {
+  padding: 20px;
+  width: 100%;
+  background: darken($brand-green, 10%);
+  color: #fff;
+  &:hover {
+    background: $brand-green;
+  }
+}
+
+
+// signup form
+
+.form-errorred, .form .error {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  padding: 15px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}

@@ -1,19 +1,19 @@
 Offline::Application.routes.draw do
-
-  resources :events, :users do
+  resources :issues, :users do
     resources :comments
   end
 
-  controller :sendmails do
-    get '/sendmails/new' => 'sendmails#newmail'
-    post '/sendmails' => 'sendmails#sendmail'
+  resources :users do
+    resources :issues
   end
 
-  match "user_login" => "users#login"
-  match "login" => "users#login_form"
-  match "about" => "info#about"
-  match "logout" => "users#logout", :as => "logout"
-  root :to => 'events#index'
-  match "signup" => "users#signup", :as => "signup"
-
+  post "/close" => "issues#close"
+  post "/issues/close/:id" => "issues#close"
+  post "/issues/open/:id" => "issues#open"
+  root to: "users#welcome"
+  get "login" => "users#login", :as => "login"
+  get "signup" => "users#signup", :as => "signup"
+  post "create_login_session" => "users#create_login_session"
+  delete "logout" => "users#logout", :as => "logout"
+  resources :users, only: [:create]
 end

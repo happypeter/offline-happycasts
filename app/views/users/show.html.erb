@@ -1,21 +1,30 @@
-<div id="user_show" class="container">
-  <div id="user_name">
-    Name: <%= @user.name %>
-  </div>
-  <div id="user_email">
-    Email: <%= @user.email %>
-  </div>
-  <div id="in_beijing">
-    In Beijing:
-    <% if @user.in_beijing? %>
-      Yes
-    <% else %>
-      No
-    <% end %>
-  </div>
-
-  <% if current_user && current_user.id == @user.id %>
-    <%= link_to "Edit Your Profile", edit_user_path(@user) %>
+<%# when you open your own homepage, everything is editable %>
+<%# https://medium.com/@happypeter1983 %>
+<div class="user">
+  <% if current_user && current_user == @user %>
+    <div class="user-avatar" title="update your avatar at gravatar.com">
+      <%= link_to "http://gravatar.com" do %>
+        <img src=<%= @user.avatar %> alt="" class="user-avatar-image">
+      <% end %>
+    </div>
+  <% else %>
+    <div class="user-avatar">
+      <img src=<%= @user.avatar %> alt="" class="user-avatar-image">
+    </div>
   <% end %>
-</div><!-- user_show -->
+  <h1 class="user-name">
+    <%= @user.name %>
+  </h1>
+  <% if current_user && current_user == @user %>
+     editable description
+  <% else %>
+    <p class="user-description">
+      <%= @user.description %>
+    </p>
+  <% end %>
+</div>
 
+<%= render partial: 'shared/issue_list',
+    locals: {issues: @user.issues.reverse} %>
+
+<%= render partial: 'shared/comment_list', locals: {comments: @user.comments.reverse} %>

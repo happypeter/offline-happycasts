@@ -1,0 +1,10 @@
+<div class="hero clearfix">
+  <%= image_tag 'dog.png', class: "logo" %>
+  <h1 class="hero-title">Happycasts Offline Meetup</h1>
+  <p class="hero-description">Debug some code, Make a couple of new friends.</p>
+</div>
+<%= link_to "New Issue", new_issue_path, class: "new-issue-button" %>
+<div class="issue-list-container clearfix">
+<%= render partial: 'shared/issue_list',
+    locals: {issues: @issues} %>
+</div>

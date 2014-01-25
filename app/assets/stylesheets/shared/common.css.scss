@@ -1,0 +1,49 @@
+@import "globals/variables";
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background: #3c3636;
+}
+
+.container {
+  width: 920px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: darken($brand-green, 10%);
+  &:hover {
+    color: $brand-green;
+  }
+}
+
+
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/* reset.css */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+p, pre {
+  margin: 0;
+}

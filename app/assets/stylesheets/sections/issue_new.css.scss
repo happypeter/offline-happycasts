@@ -1,0 +1,20 @@
+@import "globals/variables";
+
+.new-issue-form-container {
+  width: 800px;
+  background: white;
+  margin: 30px auto;
+  .new-issue-form {
+    width: 600px;
+    margin: 10px auto;
+  }
+}
+.submit-issue-button {
+  padding: 20px;
+  width: 100%;
+  background: darken($brand-green, 10%);
+  color: #fff;
+  &:hover {
+    background: $brand-green;
+  }
+}
