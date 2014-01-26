@@ -10,10 +10,10 @@
         <%= link_to i.title, issue_path(i) %>
       </h3>
       <p class="issue-snippet">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, voluptas.
+        <%= truncate(i.content, length: 100) { link_to "Continue", i } %>
       </p>
       <div class="meta-data">
-        happypeter posted on yesterday, 5 comments
+        <%= link_to i.user.name, i.user %> posted on <%= time_ago_in_words(i.created_at) %> ago
       </div>
     </li>
   <% end %>

@@ -1,3 +1,6 @@
 tmp
 log/*
 *.swp
+
+# Ignore local ruby-version
+.ruby-version
