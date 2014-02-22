@@ -17,8 +17,8 @@
 </div>
 <div class="issue-body">
   <h1 class="issue-body-title"><%= @issue.title %></h1>
-  <div class="issue-meta-data">
-    <a href="">happypeter at 22:13 - 28 Nov 2013</a>
+  <div class="issue-meta-date">
+    <%= link_to @issue.user.name %> at <%= @issue.created_at.strftime("%H:%M - %d %b %Y") %>
   </div>
   <div class="issue-content">
     <%= markdown(@issue.content) %>
@@ -28,7 +28,7 @@
 
 <% if current_user %>
   <div class="comment">
-    <p class="date-time">22:13 - 28 November 2013</p>
+    <p class="date-time"><%= Time.now.strftime("%H:%M - %d %B %Y") %></p>
     <div class="message clearfix">
      <%= link_to current_user do %>
        <img src=<%= current_user.avatar %> alt="" class="avatar">
@@ -36,15 +36,16 @@
       <div class="user-name">
         <%= link_to current_user.name, current_user %>:
       </div>
-      <%= form_for([@issue, @issue.comments.build]) do |f| %>
-        <%= f.text_area :content, placeholder: "say something"%>
+      <div class="comment-form">
+        <%= form_for([@issue, @issue.comments.build]) do |f| %>
+          <%= f.text_area :content, placeholder: "say something", class: "comment-textarea" %>
         <%= f.submit 'Submit', class: 'btn-submit' %>
       <% end %>
+    </div>
     </div>
   </div>
 <% end %>
 
 <%= render partial: 'shared/comment_list', locals: {comments: @comments} %>
-
 
 
