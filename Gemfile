@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
@@ -34,6 +34,11 @@ end
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
+
+# Text Format
+gem 'redcarpet'
+gem 'pygments.rb'
+
 
 # Use unicorn as the app server
 # gem 'unicorn'
