@@ -10,7 +10,7 @@
         <%= link_to i.title, issue_path(i) %>
       </h3>
       <p class="issue-snippet">
-        <%= truncate(i.content, length: 100) { link_to "Continue", i } %>
+        <%= truncate(markdown(i.content), length: 10) { link_to "Continue", i } %>
       </p>
       <div class="meta-data">
         <%= link_to i.user.name, i.user %> posted on <%= time_ago_in_words(i.created_at) %> ago

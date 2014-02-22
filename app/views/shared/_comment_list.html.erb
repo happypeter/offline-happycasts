@@ -11,7 +11,7 @@
         <div class="user-name">
           <%= link_to c.user.name, c.user %>:
         </div>
-        <%= c.content %>
+        <%= markdown(c.content) %>
        </div>
     </li>
   <% end %>

@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://ruby.taobao.org/
   specs:
     actionmailer (4.0.2)
       actionpack (= 4.0.2)
@@ -55,6 +55,10 @@ GEM
     multi_json (1.8.4)
     mysql2 (0.3.14)
     polyglot (0.3.3)
+    posix-spawn (0.3.6)
+    pygments.rb (0.5.2)
+      posix-spawn (~> 0.3.6)
+      yajl-ruby (~> 1.1.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -77,6 +81,7 @@ GEM
     rake (10.1.1)
     rdoc (4.1.1)
       json (~> 1.4)
+    redcarpet (2.1.1)
     sass (3.2.13)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -107,6 +112,7 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    yajl-ruby (1.1.0)
 
 PLATFORMS
   ruby
@@ -117,8 +123,10 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   mysql2
+  pygments.rb
   rails (= 4.0.2)
   rails-timeago (~> 2.0)
+  redcarpet
   sass-rails (~> 4.0.0)
   sdoc
   turbolinks
