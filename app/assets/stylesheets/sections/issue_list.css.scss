@@ -1,4 +1,9 @@
 .issue-list {
+  background: #fff;
+  clear: both;
+  padding: 0 2em;
+  margin-bottom: 1em;
+  border: 1px solid #ddd;
   article {
     border-bottom: 1px solid #e3e3e3;
     position: relative;
@@ -11,15 +16,16 @@
       .datetime {
         background-color: #316A72;
         color: #fff;
-        font-size: 15px;
+        font-size: 13px;
         display: inline-block;
-        line-height: 1.9;
+        line-height: 1.7;
         padding: 0 7px;
       }
       .meta-data {
         color: #999;
         font-size: 14px;
       }
+
       h5 {
         font-size: 1.3em;
         line-height: 1.7em;
@@ -31,6 +37,13 @@
             color: black;
           }
         }
+      }
+    }
+    .issue-comment-count {
+      float: right;
+      margin-top: 15px;
+      a {
+        font-size: 2em;
       }
     }
     .avatar {
