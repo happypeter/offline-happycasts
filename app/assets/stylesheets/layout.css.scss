@@ -1,7 +1,10 @@
 @import "globals/variables";
 
-.navbar {
+.welcome .navbar {
   background: transparent;
+}
+.navbar {
+  background: #222;
   position: relative;
   z-index: 1000;
   a {

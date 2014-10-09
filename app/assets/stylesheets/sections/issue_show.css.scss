@@ -1,88 +1,49 @@
 @import "globals/variables";
 
 
-// main post here
-.issue-author {
-  text-align: center;
-}
-.user-name {
-  margin-bottom: 6px;
-}
-.issue-author-avatar {
-  margin-top: -60px;
-  margin-bottom: 20px;
-  display: inline-block;
-  width: 120px;
-  height: 120px;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-  overflow: hidden;
-  border: 3px solid #fff;
-  z-index: 500;
-  background-color: #fff;
-  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
-  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
-  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
-  .issue-author-avatar-image {
-    display: block;
-    width: 100%;
-    height: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
-  }
+.issue-heading {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-top: 0;
+  margin-bottom: 35px;
+  background: #7eb6ad;
+  color: #fff;
 }
 
-.issue-state {
-  float: right;
-  margin-top: -40px;
-  margin-right: 20px;
-  .btn-switch {
-    li {
-      float: left;
-      margin-left: 10px;
-    }
-    .active a{
-      opacity: 1;
-      background: #57AD68;
-      color: #FFF;
-      padding: 14px;
-    }
-  }
-}
+
 .issue-body {
-   position: relative;
-   padding: 20px;
-   height: auto;
-   border-radius: 3px;
-   background: white;
-   color: #9d9d9d;
-   &:before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    margin-left: -5px;
-    top: -20px;
-    border: 10px solid transparent;
-    border-bottom: 10px solid white;
-  }
-  .issue-body-title {
-    color:green;
-  }
-  .issue-meta-date {
-    margin: 12px 0;
-    padding-bottom: 12px;
-    border-bottom: 1px dotted #878726;
-    a {
-     color: $link-gray;
-    }
-    color: $link-gray;
-  }
-  .issue-content {
-    margin-top: 20px;
-    text-index: 2em;
-  }
+ position: relative;
+ padding: 20px;
+ height: auto;
+ border-radius: 3px;
+ background: white;
+ color: #9d9d9d;
+ &:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-left: -5px;
+  top: -20px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid white;
+}
+.issue-body-title {
+  color:green;
+}
+.issue-meta-date {
+  margin: 12px 0;
+  padding-bottom: 12px;
+  border-bottom: 1px dotted #878726;
+  a {
+   color: $link-gray;
+ }
+ color: $link-gray;
+}
+.issue-content {
+  margin-top: 20px;
+  text-index: 2em;
+}
 }
 
 

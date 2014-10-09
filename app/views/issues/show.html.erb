@@ -1,3 +1,8 @@
+<div class="issue-heading">
+  <div class="container clearfix">
+    <%= @issue.title %>
+  </div>
+</div>
 <div class="issue-author">
   <div class="issue-author-avatar">
      <%= link_to @issue.user do %>
@@ -5,16 +10,7 @@
      <% end %>
   </div>
 </div>
-<div class="issue-state">
-  <ul class="btn-switch">
-    <li <%= "class=active" if @issue.state == 'closed' %> >
-       <%= link_to "Close", "/issues/close/#{@issue.id}", :method => :post %>
-    </li>
-    <li <%= "class=active" if @issue.state == 'open' %> >
-      <%= link_to "Open", "/issues/open/#{@issue.id}", :method => :post %>
-    </li>
-  </ul>
-</div>
+
 <div class="issue-body">
   <h1 class="issue-body-title"><%= @issue.title %></h1>
   <div class="issue-meta-date">
