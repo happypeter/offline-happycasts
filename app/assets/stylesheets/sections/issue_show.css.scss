@@ -12,113 +12,46 @@
 }
 
 
-.issue-body {
- position: relative;
- padding: 20px;
- height: auto;
- border-radius: 3px;
- background: white;
- color: #9d9d9d;
- &:before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  margin-left: -5px;
-  top: -20px;
-  border: 10px solid transparent;
-  border-bottom: 10px solid white;
-}
-.issue-body-title {
-  color:green;
-}
-.issue-meta-date {
-  margin: 12px 0;
-  padding-bottom: 12px;
-  border-bottom: 1px dotted #878726;
-  a {
-   color: $link-gray;
- }
- color: $link-gray;
-}
-.issue-content {
-  margin-top: 20px;
-  text-index: 2em;
-}
-}
-
-
-// comments start here
-.comment-list {
-  margin-top: 20px;
-}
-.comment {
-  padding: 30px 15px;
-  width: 80%;
-  margin: auto;
-  .date-time {
-    font-weight: 400;
-    color: #9d9d9d;
-    margin-bottom: 10px;
-  }
-  .comment-box {
-    margin-left: 110px;
-    border: 1px solid #dddddd;
-    color: #333333;
-
-    .comment-created-by {
-      padding: 10px 10px;
-      background: #3fb618;
-    }
-    .comment-content {
-      min-height: 70px;
-      margin: 15px;
-      p {
-        color: #717171;
-        font-family: Georgia, "Times New Roman", Times, "Songti SC", "SimSun", serif;
-        font-size: 14px;
-        font-weight: 100;
-        line-height: 24px
-      }
-    }
-  }
-  .message {
+.reply {
+  position: relative;
+  margin-bottom: 2em;
+  width: 91%;
+  .body {
+    background: #fff;
+    padding: 1em;
+    border-radius: 5px;
     position: relative;
-    padding: 20px;
-    height: auto;
-    border-radius: 3px;
-    background: white;
-    color: #9d9d9d;
-    .avatar {
-      border-radius: 50%;
-      width: auto;
-      max-width: 99px;
-      height: auto;
-      float: left;
+    overflow: visible;
+    float: left;
+    width: 87%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    line-height: 1.6;
+    &::before {
+      content: "";
       display: block;
-      margin-right: 10px;
+      position: absolute;
+      top: 21px;
+      left: -6px;
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      border-left: 1px solid #cad5e0;
+      border-top: 1px solid #cad5e0;
+      -moz-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
     }
   }
-  .message:before {
-    content: "";
-    position: absolute;
-    left: 20px;
-    top: -20px;
-    border: 10px solid transparent;
-    border-bottom: 10px solid white;
-  }
-  textarea {
-    outline: 0;
-    border: 1px solid #3fb618;
-  }
-
-  .btn-submit {
-    color: #ffffff;
-    background-color: #3fb618;
-    border-color: #3fb618;
-    &:hover {
-      color: #ffffff;
-      background-color: #339213;
-      border-color: #2c8011;
+  .avatar {
+    float: left;
+    margin-right: 29px;
+    position: relative;
+    overflow: visible;
+    font-size: 14px;
+    text-align: center;
+    .image-circle {
+      width: 75px;
+      border-radius: 50%;
     }
   }
 }

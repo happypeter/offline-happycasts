@@ -3,43 +3,48 @@
     <%= @issue.title %>
   </div>
 </div>
-<div class="issue-author">
-  <div class="issue-author-avatar">
-     <%= link_to @issue.user do %>
-       <img src=<%= @issue.user.avatar %> alt="" class="issue-author-avatar-image">
-     <% end %>
+<div class="container">
+  <div class="replies">
+    <article class="reply clearfix">
+      <div class="avatar">
+        <%= link_to @issue.user do %>
+          <img src=<%= @issue.user.avatar %> alt="" class="image-circle">
+        <% end %>
+      </div>
+      <div class="body">
+
+        <div class="heading">
+          <%= link_to @issue.user.name %> at <%= @issue.created_at.strftime("%H:%M - %d %b %Y") %>
+        </div>
+        <%= @issue.content %>
+      </div>
+    </article>
   </div>
 </div>
 
-<div class="issue-body">
-  <h1 class="issue-body-title"><%= @issue.title %></h1>
-  <div class="issue-meta-date">
-    <%= link_to @issue.user.name %> at <%= @issue.created_at.strftime("%H:%M - %d %b %Y") %>
-  </div>
-  <div class="issue-content">
-    <%= @issue.content %>
-  </div>
-</div>
+
+
+
 
 
 <% if current_user %>
-  <div class="comment">
-    <p class="date-time"><%= Time.now.strftime("%H:%M - %d %B %Y") %></p>
-    <div class="message clearfix">
-     <%= link_to current_user do %>
-       <img src=<%= current_user.avatar %> alt="" class="avatar">
-     <% end %>
-      <div class="user-name">
-        <%= link_to current_user.name, current_user %>:
-      </div>
-      <div class="comment-form">
-        <%= form_for([@issue, @issue.comments.build]) do |f| %>
-          <%= f.text_area :content, placeholder: "say something", class: "comment-textarea" %>
-        <%= f.submit 'Submit', class: 'btn-submit' %>
-      <% end %>
-    </div>
-    </div>
+<div class="comment">
+  <p class="date-time"><%= Time.now.strftime("%H:%M - %d %B %Y") %></p>
+  <div class="message clearfix">
+   <%= link_to current_user do %>
+   <img src=<%= current_user.avatar %> alt="" class="avatar">
+   <% end %>
+   <div class="user-name">
+    <%= link_to current_user.name, current_user %>:
   </div>
+  <div class="comment-form">
+    <%= form_for([@issue, @issue.comments.build]) do |f| %>
+    <%= f.text_area :content, placeholder: "say something", class: "comment-textarea" %>
+    <%= f.submit 'Submit', class: 'btn-submit' %>
+    <% end %>
+  </div>
+</div>
+</div>
 <% end %>
 
 <%= render partial: 'shared/comment_list', locals: {comments: @comments} %>

@@ -1,7 +1,7 @@
 #encoding: utf-8
 class UsersController < ApplicationController
   def welcome
-    @issues = Issue.where(state: 'open')
+    @issues = Issue.all
   end
 
   def signup
