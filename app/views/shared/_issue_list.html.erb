@@ -1,6 +1,6 @@
-<ul class="issue-list">
+<div class="issue-list">
   <% issues.each do |i| %>
-    <li class="issue">
+    <article class="issue">
       <div class="avatar">
         <%= link_to i.user do %>
           <img src=<%= i.user.avatar %> alt="">
@@ -15,6 +15,6 @@
       <div class="meta-data">
         <%= link_to i.user.name, i.user %> posted on <%= time_ago_in_words(i.created_at) %> ago
       </div>
-    </li>
+    </article>
   <% end %>
-</ul>
+</div>
