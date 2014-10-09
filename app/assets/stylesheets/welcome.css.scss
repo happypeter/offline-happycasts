@@ -6,7 +6,8 @@
     height: 600px;
     position: relative;
     h1 {
-      font-size: 7em;
+      font-family: "museo-sans-condensed";
+      font-size: 6em;
       font-weight: 400;
       letter-spacing: -2px;
       border-radius: 5px;
@@ -47,6 +48,20 @@
     &:hover {
       border: 1px solid rgba(0,0,0,0.2);
     }
+  }
+}
+
+.issue-list-header {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  margin-top: 0;
+  margin-bottom: 35px;
+  background: #7eb6ad;
+  color: #fff;
+  .issue-list-heading {
+    font-size: 2em;
+    font-weight: normal;
   }
 }
 

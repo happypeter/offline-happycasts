@@ -12,6 +12,11 @@ body {
   margin: 0 auto;
 }
 
+::selection {
+  background: #c0865e;
+  color: #fff;
+}
+
 a {
   text-decoration: none;
   color: darken($brand-green, 10%);
@@ -20,6 +25,11 @@ a {
   }
 }
 
+h1, h2, h3, h4 {
+  font-family: "museo-sans-condensed";
+  font-weight: 300;
+  line-height: 1.4em;
+}
 
 
 .clearfix:before,
