@@ -12,41 +12,20 @@
         <% end %>
       </div>
       <div class="body">
-
         <div class="heading">
-          <%= link_to @issue.user.name %> at <%= @issue.created_at.strftime("%H:%M - %d %b %Y") %>
+          <h5 class="name"><%= link_to @issue.user.name %></h5>
+          <span class="datetime">
+            -- <%= timeago_tag @issue.created_at, :nojs => true, :limit => 10.days.ago, :lang => 'zh-CN' %> ago
+          </span>
         </div>
         <%= @issue.content %>
       </div>
     </article>
+    <%= render partial: 'shared/comment_list', locals: {comments: @comments} %>
   </div>
 </div>
 
+<%# render partial: 'shared/comment_box' %>
 
-
-
-
-
-<% if current_user %>
-<div class="comment">
-  <p class="date-time"><%= Time.now.strftime("%H:%M - %d %B %Y") %></p>
-  <div class="message clearfix">
-   <%= link_to current_user do %>
-   <img src=<%= current_user.avatar %> alt="" class="avatar">
-   <% end %>
-   <div class="user-name">
-    <%= link_to current_user.name, current_user %>:
-  </div>
-  <div class="comment-form">
-    <%= form_for([@issue, @issue.comments.build]) do |f| %>
-    <%= f.text_area :content, placeholder: "say something", class: "comment-textarea" %>
-    <%= f.submit 'Submit', class: 'btn-submit' %>
-    <% end %>
-  </div>
-</div>
-</div>
-<% end %>
-
-<%= render partial: 'shared/comment_list', locals: {comments: @comments} %>
 
 

@@ -1,22 +1,18 @@
-<ul class="comment-list">
   <% comments.each do |c| %>
-    <li class="comment">
-       <p class="date-time">
-         <%= timeago_tag c.created_at, :nojs => true, :limit => 10.days.ago, :lang => 'zh-CN' %>
-       </p>
-       <div class="message clearfix">
-        <%= link_to c.user do %>
-          <img src=<%= c.user.avatar %> alt="" class="avatar">
-        <% end %>
-        <div class="comment-box">
-          <div class="comment-created-by">
-            <%= link_to c.user.name, c.user %>:
-          </div>
-          <div class="comment-content">
-            <%= c.content %>
-          </div>
-        </div>
+    <div class="reply clearfix">
+       <div class="avatar">
+         <%= link_to c.user do %>
+           <img src=<%= c.user.avatar %> alt="" class="image-circle">
+         <% end %>
        </div>
-    </li>
+       <div class="body">
+         <div class="heading">
+            <h5 class="name"><%= link_to c.user.name, c.user %></h5>
+            <span class="datetime">
+              -- <%= timeago_tag c.created_at, :nojs => true, :limit => 10.days.ago, :lang => 'zh-CN' %> ago
+            </span>
+         </div>
+         <%= c.content %>
+       </div>
+    </div>
   <% end %>
-</ul>
