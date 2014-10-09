@@ -4,6 +4,35 @@
     position: relative;
     margin-top: 0;
     padding: 1em 0;
+    .body {
+      margin-right: 2em;
+      width: 70%;
+      float: left;
+      .datetime {
+        background-color: #316A72;
+        color: #fff;
+        font-size: 15px;
+        display: inline-block;
+        line-height: 1.9;
+        padding: 0 7px;
+      }
+      .meta-data {
+        color: #999;
+        font-size: 14px;
+      }
+      h5 {
+        font-size: 1.3em;
+        line-height: 1.7em;
+        font-weight: normal;
+        margin: 0 0 5px;
+        a {
+          color: black;
+          &:hover {
+            color: black;
+          }
+        }
+      }
+    }
     .avatar {
       width: 75px;
       float: left;

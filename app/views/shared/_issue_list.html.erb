@@ -1,19 +1,19 @@
 <div class="issue-list">
   <% issues.each do |i| %>
-    <article class="issue">
+    <article class="issue clearfix">
       <div class="avatar">
         <%= link_to i.user do %>
           <img src=<%= i.user.avatar %> alt="">
         <% end %>
       </div>
-      <h3 class="issue-title">
-        <%= link_to i.title, issue_path(i) %>
-      </h3>
-      <p class="issue-snippet">
-        <%= i.content %>
-      </p>
-      <div class="meta-data">
-        <%= link_to i.user.name, i.user %> posted on <%= time_ago_in_words(i.created_at) %> ago
+      <div class="body">
+        <h5 class="title">
+          <%= link_to i.title, issue_path(i) %>
+        </h5>
+        <span class="datetime">2014年5月六日下午，3:00~6:00</span>
+        <span class="meta-data">
+          <%= link_to i.user.name, i.user %> posted on <%= time_ago_in_words(i.created_at) %> ago
+        </span>
       </div>
     </article>
   <% end %>
