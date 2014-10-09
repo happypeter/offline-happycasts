@@ -1,41 +1,33 @@
 @import "globals/variables";
 
-.header {
+.navbar {
   background: transparent;
-  line-height: 70px;
-  .logo {
-    width: 200px;
-    float: left;
-  }
-  .header-logo-wordmark {
-    width: 100px;
-    float: left;
-  }
   a {
-    color: white;
-    display: block;
-    padding: 0 18px;
+    color: #fff;
     &:hover {
-      color: darken($brand-green, 10%);
+      color: #c0865e;
+    }
+  }
+  .navbar-brand {
+    float: left;
+    padding-left: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 40px;
+    font-size: 20px;
+  }
+  .nav {
+    float: right;
+    li {
+      display: inline-block;
+      a {
+        display: block;
+        float: right;
+        padding-left: 20px;
+        line-height: 80px;
+      }
     }
   }
 }
 
-.nav {
-  float: right;
-  li {
-    float: left;
-    a {
-      img {
-        float: left;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        margin: 20px 5px;
-      }
-    }
-    .sign-out {
-      font-size: 20px;
-    }
-  }
-}
+

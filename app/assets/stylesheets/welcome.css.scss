@@ -1,10 +1,10 @@
 @import "globals/variables";
-.hero {
-  height: 500px;
-  margin-top: -70px;
-}
-.logo {
-  width: 100px;
+.home-banner {
+  margin-top: -80px;
+  padding-top: 80px;
+  .banner-inner {
+    height: 600px;
+  }
 }
 
 .new-issue-button {
