@@ -21,7 +21,7 @@
     <%= link_to @issue.user.name %> at <%= @issue.created_at.strftime("%H:%M - %d %b %Y") %>
   </div>
   <div class="issue-content">
-    <%= markdown(@issue.content) %>
+    <%= @issue.content %>
   </div>
 </div>
 

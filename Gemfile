@@ -35,10 +35,6 @@ end
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
 
-# Text Format
-gem 'redcarpet'
-gem 'pygments.rb'
-
 
 # Use unicorn as the app server
 # gem 'unicorn'
