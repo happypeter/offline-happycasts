@@ -2,6 +2,8 @@
 
 .navbar {
   background: transparent;
+  position: relative;
+  z-index: 1000;
   a {
     color: #fff;
     &:hover {
