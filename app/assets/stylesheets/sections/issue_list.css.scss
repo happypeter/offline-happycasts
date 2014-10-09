@@ -1,0 +1,17 @@
+.issue-list {
+  article {
+    border-bottom: 1px solid #e3e3e3;
+    position: relative;
+    margin-top: 0;
+    padding: 1em 0;
+    .avatar {
+      width: 75px;
+      float: left;
+      img {
+        width: 65px;
+        padding: 4px;
+        border: 1px solid #ddd;
+      }
+    }
+  }
+}
