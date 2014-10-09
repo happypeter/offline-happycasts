@@ -1,15 +1,16 @@
 <div class="home-banner" data-stretch="<%= image_path 'home-banner-bg.jpg' %>" >
   <div class="banner-inner container clearfix">
-    <h1>Happycasts.net Meetup</h1>
+    <h1>Happycasts Meetup</h1>
+    <p class="subheading">Join Us if You Love Coding the Web</p>
+    <div class="home-banner-links">
+      <%= link_to "New Event", new_issue_path, class: "btn" %>
+    </div>
   </div>
 </div>
-
-  <%= link_to "New Issue", new_issue_path, class: "new-issue-button" %>
-
 
 <div class="issue-list-container clearfix">
   <%= render partial: 'shared/issue_list', locals: {issues: @issues} %>
 </div>
 <script type="text/javascript">
-    $(".home-banner").anystretch();
+  $(".home-banner").anystretch();
 </script>

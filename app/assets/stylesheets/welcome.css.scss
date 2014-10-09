@@ -4,20 +4,49 @@
   padding-top: 80px;
   .banner-inner {
     height: 600px;
+    position: relative;
+    h1 {
+      font-size: 7em;
+      font-weight: 400;
+      letter-spacing: -2px;
+      border-radius: 5px;
+      margin-top: 60px;
+      line-height: 1;
+      max-width: 50%;
+      text-transform: capitalize;
+      color: #fff;
+      text-shadow: 0 1px 81px rgba(0,0,0,0.3);
+    }
+    .subheading {
+      color: #fff;
+      font-weight: 300;
+      font-size: 1.3em;
+      margin-top: 19px;
+      background: rgba(0,0,0,0.5);
+      display: block;
+      width: 45%;
+      padding: 3px 10px;
+      line-height: 30px;
+      text-align: center;
+    }
   }
 }
-
-.new-issue-button {
-  display: block;
-  width: 100px;
-  margin: 10px auto;
-  padding: 20px;
-  text-align: center;
-  background: darken($brand-green, 10%);
-  color: #fff;
-  &:hover {
-    color: white;
-    background: $brand-green;
+.home-banner-links {
+  position: absolute;
+  right: 160px;
+  top: 194px;
+  .btn {
+    padding: 15px 15px;
+    font-size: 1.5em;
+    font-weight: 300;
+    font-family: "museo-sans-condensed";
+    border-radius: 5px;
+    color: #fff;
+    background: rgba(0,0,0,0.1);
+    margin-left: 8px;
+    &:hover {
+      border: 1px solid rgba(0,0,0,0.2);
+    }
   }
 }
 
