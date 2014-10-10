@@ -15,4 +15,9 @@ class ApplicationController < ActionController::Base
       redirect_to login_path, :notice => "Login first place"
     end
   end
+
+  def redirect_to_target_or_default(default, *options)
+    redirect_to(session[:return_to] || default, *options)
+    session[:return_to] = nil
+  end
 end

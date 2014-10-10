@@ -13,6 +13,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_name(params[:username])
+    session[:return_to] = request.url
   end
 
   def create_login_session
@@ -39,6 +40,12 @@ class UsersController < ApplicationController
     else
       render :signup
     end
+  end
+
+  def update
+    @user = current_user
+    @user.update_attributes(user_params)
+    redirect_to_target_or_default root_url
   end
 
   private

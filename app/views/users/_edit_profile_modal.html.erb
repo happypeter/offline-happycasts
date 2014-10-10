@@ -1,1 +1,6 @@
 <%= user.name %>
+<%= form_for @user do |f| %>
+  <%= f.text_field :email %>
+  <br>
+  <%= f.submit :class=>"btn btn-primary" %>
+<% end %>
