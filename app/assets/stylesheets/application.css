@@ -10,5 +10,6 @@
  *
  *= require_self
  *= require font-awesome
+ *= require colorbox-rails
  *= require_tree .
  */

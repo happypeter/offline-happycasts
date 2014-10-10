@@ -36,6 +36,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    colorbox-rails (0.1.2)
+      jquery-rails
+      rails (>= 3.1.1)
     erubis (2.7.0)
     execjs (2.0.2)
     font-awesome-rails (4.2.0.0)
@@ -116,6 +119,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby (~> 3.1.2)
   coffee-rails (~> 4.0.0)
+  colorbox-rails
   font-awesome-rails
   jbuilder (~> 1.2)
   jquery-rails

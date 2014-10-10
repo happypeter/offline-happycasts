@@ -17,3 +17,14 @@
     </h2>
   </div>
 </div>
+
+
+<%= link_to "My superb link", "#profile-edit-modal", :class => "inline" %>
+
+<div id="profile-edit-modal">
+  edit me
+</div>
+
+<script>
+  $(".inline").colorbox({inline:true, width:"50%"});
+</script>

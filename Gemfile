@@ -46,3 +46,4 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 # gem 'debugger', group: [:development, :test]
 gem 'rails-timeago', '~> 2.0'
 gem 'font-awesome-rails'
+gem 'colorbox-rails'
