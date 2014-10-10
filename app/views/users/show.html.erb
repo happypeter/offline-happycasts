@@ -1,1 +1,14 @@
-<%= @user.name %>
+<div class="banner-profile">
+  <div class="container clearfix">
+    <img src=<%= @user.avatar %> alt="" class="profile-avatar">
+    <ul class="profile-links">
+      <li><%= @user.email %></li>
+    </ul>
+  </div>
+</div>
+
+<div class="profile-stats clearfix">
+  <div class="container clearfix">
+    <h2 class="profile-name"> <%= @user.name %></h2>
+  </div>
+</div>

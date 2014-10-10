@@ -12,9 +12,9 @@
 .submit-issue-button {
   padding: 20px;
   width: 100%;
-  background: darken($brand-green, 10%);
+  background: darken($brand-color, 10%);
   color: #fff;
   &:hover {
-    background: $brand-green;
+    background: $brand-color;
   }
 }

@@ -1,0 +1,42 @@
+@import "globals/variables";
+
+.banner-profile {
+  padding: 1.5em 0;
+  overflow: visible;
+  min-height: 200px;
+  border-top: none !important;
+  background: $brand-color;
+  -webkit-background-size: cover !important;
+  background-size: cover !important;
+}
+
+.profile-avatar {
+  border: 1px solid #fff;
+  padding: 5px;
+  width: 190px;
+  float: left;
+  &:hover {
+    border: 1px solid #c0865e;
+  }
+}
+
+.profile-stats {
+  background: #333;
+  border-bottom: 1px solid #555;
+}
+.profile-name {
+  color: #fff;
+  font-weight: 400;
+  font-size: 40px;
+  display: inline-block;
+  line-height: 80px;
+  margin: 0;
+}
+
+.profile-links {
+  color: #fff;
+  font-size: 1.1em;
+  padding-left: 0;
+  float: right;
+  text-align: right;
+}

@@ -14,16 +14,15 @@
 .need-signup{
   margin: 10px 0;
   float: right;
-  color: $link-gray;
 }
 
 .signup-button, .login-button {
   padding: 20px;
   width: 100%;
-  background: darken($brand-green, 10%);
+  background: darken($brand-color, 10%);
   color: #fff;
   &:hover {
-    background: $brand-green;
+    background: $brand-color;
   }
 }
 
