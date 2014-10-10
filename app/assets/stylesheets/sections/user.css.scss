@@ -45,6 +45,10 @@
   color: white;
   background: #c0865e;
   border-color: #b9784c;
+  &:hover {
+    background-color: #b9784c;
+    border-color: #845534;
+  }
 }
 .btn {
   display: inline-block;
