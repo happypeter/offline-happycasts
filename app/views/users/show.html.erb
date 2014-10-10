@@ -9,6 +9,11 @@
 
 <div class="profile-stats clearfix">
   <div class="container clearfix">
-    <h2 class="profile-name"> <%= @user.name %></h2>
+    <h2 class="profile-name">
+      <%= @user.name %>
+      <button class="edit-profile btn btn-primary">
+        更改个人设置
+      </button>
+    </h2>
   </div>
 </div>
