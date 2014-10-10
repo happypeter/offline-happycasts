@@ -2,6 +2,11 @@ Offline::Application.routes.draw do
   resources :issues, :users do
     resources :comments
   end
+
+  resources :users do
+    resources :issues
+  end
+
   root to: "users#welcome"
   get "login" => "users#login", :as => "login"
   get "signup" => "users#signup", :as => "signup"
