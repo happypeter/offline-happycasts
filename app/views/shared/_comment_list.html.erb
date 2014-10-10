@@ -1,13 +1,13 @@
   <% comments.each do |c| %>
     <div class="reply clearfix">
        <div class="avatar">
-         <%= link_to c.user do %>
+         <%= link_to  profile_path(c.user.name) do %>
            <img src=<%= c.user.avatar %> alt="" class="image-circle">
          <% end %>
        </div>
        <div class="body">
          <div class="heading">
-            <h5 class="name"><%= link_to c.user.name, c.user %></h5>
+            <h5 class="name"><%= link_to c.user.name, profile_path(c.user.name) %></h5>
             <span class="datetime">
               -- <%= timeago_tag c.created_at, :nojs => true, :limit => 10.days.ago, :lang => 'zh-CN' %> ago
             </span>

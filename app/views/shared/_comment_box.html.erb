@@ -1,7 +1,7 @@
 <% if current_user %>
 <article class="reply clearfix">
   <div class="avatar">
-    <%= link_to current_user do %>
+    <%= link_to profile_path(current_user.name) do %>
       <img src=<%= current_user.avatar %> alt="" class="image-circle">
     <% end %>
   </div>

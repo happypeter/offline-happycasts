@@ -7,13 +7,13 @@
   <div class="replies">
     <article class="reply clearfix">
       <div class="avatar">
-        <%= link_to @issue.user do %>
+        <%= link_to profile_path(@issue.user.name) do %>
           <img src=<%= @issue.user.avatar %> alt="" class="image-circle">
         <% end %>
       </div>
       <div class="body">
         <div class="heading">
-          <h5 class="name"><%= link_to @issue.user.name %></h5>
+          <h5 class="name"><%= link_to @issue.user.name, profile_path(@issue.user.name)%></h5>
           <span class="datetime">
             -- <%= timeago_tag @issue.created_at, :nojs => true, :limit => 10.days.ago, :lang => 'zh-CN' %> ago
           </span>
