@@ -1,6 +1,10 @@
-<%= user.name %>
+<div class="header">
+  更改个人信息
+</div>
+
 <%= form_for @user do |f| %>
-  <%= f.text_field :email %>
+  <label for="email">Email:</label>
+  <%= f.text_field :email, :class => "form-control"%>
   <br>
   <%= f.submit :class=>"btn btn-primary" %>
 <% end %>
