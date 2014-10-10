@@ -6,17 +6,10 @@
     <% end %>
   </div>
   <div class="body">
-    body
-  </div>
-  <div class="user-name">
-    <%= link_to current_user.name, current_user %>:
-  </div>
-    <p class="date-time"><%= Time.now.strftime("%H:%M - %d %B %Y") %></p>
-  <div class="comment-form">
-    <%= form_for([@issue, @issue.comments.build]) do |f| %>
-    <%= f.text_area :content, placeholder: "say something", class: "comment-textarea" %>
-    <%= f.submit 'Submit', class: 'btn-submit' %>
-    <% end %>
+      <%= form_for([@issue, @issue.comments.build]) do |f| %>
+      <%= f.text_area :content %>
+      <%= f.submit '提交评论', class: 'btn-submit' %>
+      <% end %>
   </div>
 </article>
 <% end %>
