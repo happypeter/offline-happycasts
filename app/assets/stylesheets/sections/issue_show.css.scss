@@ -15,6 +15,7 @@
 .reply {
   position: relative;
   margin-bottom: 2em;
+  color: #666;
   width: 91%;
   .heading {
     margin-bottom: 5px;
@@ -33,7 +34,7 @@
     padding: 1em;
     border-radius: 5px;
     position: relative;
-    overflow: visible;
+    overflow: auto;
     float: left;
     width: 87%;
     border: 1px solid #ddd;
