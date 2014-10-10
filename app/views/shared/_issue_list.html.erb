@@ -12,7 +12,7 @@
         </h5>
         <span class="datetime">2014年5月六日下午，3:00~6:00</span>
         <span class="meta-data">
-          <%= link_to profile_path(i.user.name), i.user %> posted on <%= time_ago_in_words(i.created_at) %> ago
+          <%= link_to i.user.name, profile_path(i.user.name)%> -- <%= time_ago_in_words(i.created_at) %> ago
         </span>
       </div>
       <div class="issue-comment-count">

@@ -1,6 +1,8 @@
 <div class="issue-heading">
   <div class="container clearfix">
-    <i class="fa fa-arrow-left"></i>
+    <%= link_to "/", title: "Go Back" do %>
+      <i class="fa fa-arrow-left"></i>
+    <% end %>
     <%= @issue.title %>
   </div>
 </div>
