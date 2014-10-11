@@ -4,10 +4,6 @@ class User < ActiveRecord::Base
   has_many :comments
   has_many :issues
 
-  validates :name, :presence => true, :uniqueness => {:case_sensitive => false}
-  validates :email, :presence => true, :uniqueness => {:case_sensitive => false}, :email_format => true
-  validates :password, :length => { :minimum => 6 }, :on => :create
-
   def generate_token(column)
     begin
       self[column] = SecureRandom.urlsafe_base64
