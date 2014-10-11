@@ -20,7 +20,7 @@ class IssuesController < ApplicationController
     @issue = Issue.new(issue_params)
     @issue.user_id = current_user.id
     if @issue.save
-      redirect_to :root, :notice => "成功"
+      redirect_to :root
     else
       render :new
     end

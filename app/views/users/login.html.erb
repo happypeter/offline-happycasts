@@ -11,15 +11,15 @@
       </dl>
       <dl class="form">
         <dt>
-        <%= label_tag "密码" %>（老用户的密码均为111111）
+        <%= label_tag "密码" %>（老用户的密码均为 111111）
         </dt>
         <dd>
         <%= password_field_tag :password, params[:password] %>
         </dd>
       </dl>
-      <p> <%= submit_tag "登录", :class => "login-button" %> </p>
+      <p> <%= submit_tag "登录", :class => "login-button btn btn-primary" %> </p>
       <div class="need-signup">
-        <%= link_to "signup", signup_path %>
+        <%= link_to "没有账号？注册一个吧", signup_path %>
       </div>
     <% end %>
   </div>

@@ -1,10 +1,7 @@
 @import "globals/variables";
 
 
-.form-control {
-  height: 55px;
-  font-size: 21px;
-}
+
 
 .new-issue-form-container {
   width: 800px;
@@ -13,14 +10,6 @@
   .new-issue-form {
     width: 600px;
     margin: 10px auto;
-    textarea {
-      height: 180px;
-      font-size: 21px;
-    }
-    label {
-      display: inline-block;
-      margin-bottom: 5px;
-    }
   }
 }
 .submit-issue-button {

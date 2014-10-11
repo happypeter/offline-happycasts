@@ -95,3 +95,28 @@ p, pre {
   -o-user-select: none;
   user-select: none;
 }
+
+// form.css
+
+form {
+  input {
+    font-size: 21px;
+    width: 100%;
+    padding: 10px 12px;
+    color: #555;
+  }
+  textarea {
+    height: 180px;
+    font-size: 21px;
+    width: 100%;
+    padding: 10px 12px;
+    color: #555;
+  }
+  label {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  dd {
+    margin: 0;
+  }
+}
