@@ -18,7 +18,7 @@ class IssuesController < ApplicationController
 
   def create
     @issue = Issue.new(issue_params)
-    @issue.user_id = params[:user_id]
+    @issue.user_id = current_user.id
     if @issue.save
       redirect_to :root, :notice => "成功"
     else
