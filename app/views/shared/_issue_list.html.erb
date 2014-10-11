@@ -16,7 +16,10 @@
         </span>
       </div>
       <div class="issue-comment-count">
-        <a href="#">35</a>
+        <%= link_to i do %>
+          <i class="fa fa-comments icon-muted"></i>
+          <%= i.comments.count %>
+        <% end %>
       </div>
     </article>
   <% end %>

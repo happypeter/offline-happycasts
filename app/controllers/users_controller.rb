@@ -1,7 +1,7 @@
 #encoding: utf-8
 class UsersController < ApplicationController
   def welcome
-    @issues = Issue.all
+    @issues = Issue.all.reverse
   end
 
   def signup

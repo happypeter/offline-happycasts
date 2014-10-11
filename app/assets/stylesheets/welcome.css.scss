@@ -36,7 +36,7 @@
   position: absolute;
   right: 160px;
   top: 194px;
-  .btn {
+  .banner-btn {
     padding: 15px 15px;
     font-size: 1.5em;
     font-weight: 300;
@@ -47,6 +47,12 @@
     margin-left: 8px;
     &:hover {
       border: 1px solid rgba(0,0,0,0.2);
+      i.fa {
+        color: darken(#97603b, 30%);
+      }
+    }
+    i.fa {
+      color: #97603b;
     }
   }
 }

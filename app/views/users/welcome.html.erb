@@ -3,7 +3,10 @@
     <h1>Happycasts Meetup</h1>
     <p class="subheading">Join Us if You Love Coding the Web</p>
     <div class="home-banner-links">
-      <%= link_to "New Event", new_issue_path, class: "btn" %>
+      <%= link_to new_issue_path, class: "banner-btn"  do%>
+        <i class="fa fa-pencil"></i>
+          发布活动
+      <% end %>
     </div>
   </div>
 </div>
