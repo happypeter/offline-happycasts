@@ -2,14 +2,18 @@
   <div class="new-issue-form clearfix">
     <%= form_for(Issue.new) do |f| %>
           <dl class="form">
-            <dt><%= f.label :title %></dt>
-            <dd><%= f.text_field :title %></dd>
+            <dt><%= f.label :title, "标题" %></dt>
+            <dd><%= f.text_field :title , class: "form-control" %></dd>
           </dl>
           <dl class="form">
-            <dt> <%= f.label :content %></dt>
+            <dt><%= f.label :date, "时间" %></dt>
+            <dd><%= f.text_field :date, class: "form-control" %></dd>
+          </dl>
+          <dl class="form">
+            <dt> <%= f.label :content, "地点，活动详情及其他" %></dt>
             <dd> <%= f.text_area :content %> </dd>
           </dl>
-          <p><%= f.submit "Submit Issue", :class => "submit-issue-button" %></p>
+          <p><%= f.submit "发布新活动", :class => "submit-issue-button btn btn-primary" %></p>
     <% end %>
   </div>
 </div>

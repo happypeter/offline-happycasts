@@ -10,7 +10,7 @@
         <h5 class="title">
           <%= link_to i.title, issue_path(i) %>
         </h5>
-        <span class="datetime">2014年5月六日下午，3:00~6:00</span>
+        <span class="datetime"><%= i.date %></span>
         <span class="meta-data">
           <%= link_to i.user.name, profile_path(i.user.name)%> -- <%= time_ago_in_words(i.created_at) %> ago
         </span>
