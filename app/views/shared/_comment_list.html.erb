@@ -9,7 +9,7 @@
          <div class="heading">
             <h5 class="name"><%= link_to c.user.name, profile_path(c.user.name) %></h5>
             <span class="datetime">
-              -- <%= timeago_tag c.created_at, :nojs => true, :limit => 10.days.ago, :lang => 'zh-CN' %> ago
+              -- <%= time_ago_in_words c.created_at %>前
             </span>
          </div>
          <%= c.content %>
