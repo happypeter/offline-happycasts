@@ -16,10 +16,8 @@
   .navbar-brand {
     float: left;
     padding-left: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    line-height: 40px;
-    font-size: 20px;
+    line-height: 80px;
+    font-size: 45px;
   }
   .nav {
     float: right;
@@ -27,9 +25,14 @@
       float: left;
       a {
         display: block;
-        float: right;
-        padding-left: 20px;
-        line-height: 80px;
+        font-size: 1.1em;
+        line-height: 40px;
+        padding: 5px 10px;
+        margin: 15px 10px;
+        &:hover {
+          color: #000;
+          background: #fff;
+        }
       }
     }
   }
