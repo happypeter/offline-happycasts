@@ -14,28 +14,28 @@
 ActiveRecord::Schema.define(version: 20141011022515) do
 
   create_table "comments", force: true do |t|
-    t.text     "content"
     t.integer  "user_id"
     t.integer  "issue_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "issues", force: true do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "title"
-    t.string   "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.text     "content"
     t.integer  "user_id"
   end
 
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
-    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.string   "token"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "password_digest"
     t.string   "description"
   end
 
