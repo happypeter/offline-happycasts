@@ -70,3 +70,42 @@
     font-weight: normal;
   }
 }
+
+/* about */
+.about {
+  background: $brand-color;
+  color: #fff;
+  margin-top: 50px;
+  border-top: none;
+  .wrap {
+    margin: 0 auto;
+    width: 770px;
+    padding: 50px 0;
+    h3 {
+      font-weight: normal;
+      font-size: 25px;
+      font-weight: normal;
+      font-family: sans-serif;
+      margin-bottom: 25px;
+    }
+    p {
+      line-height: 1.9;
+      font-size: 15px;
+    }
+    .peter-avatar {
+      width: 30%;
+      float: left;
+      img {
+        border-radius: 50%;
+        padding: 3px;
+        background: #c5c5c5;
+        border: 0;
+        width: 170px;
+      }
+    }
+    .story {
+      width: 69%;
+      float: right;
+    }
+  }
+}
