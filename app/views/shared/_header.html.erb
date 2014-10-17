@@ -4,13 +4,8 @@
       <i class="fa fa-home"></i>
     </a>
     <ul class="nav left">
-      <% if current_user %>
-        <li><a href="#about">About</a></li>
-        <li><a href="http://github.com/happypeter/offline-happycasts">Code</a></li>
-      <% else %>
-        <li><%= link_to "注册", signup_path %></li>
-        <li><%= link_to "登录", login_path %></li>
-      <% end %>
+      <li><a href="#about">About</a></li>
+      <li><a href="http://github.com/happypeter/offline-happycasts">Code</a></li>
     </ul>
     <ul class="nav right">
       <% if current_user %>
