@@ -10,7 +10,7 @@
         <h5 class="title">
           <%= link_to i.title, issue_path(i) %>
         </h5>
-        <%= link_to "查看详情", i, class: "read-more" %>
+        <%= link_to "read", i, class: "read-more" %>
         <span class="meta-data">
           <%= link_to i.user.name, profile_path(i.user.name)%> <%= time_ago_in_words(i.created_at) %>前
         </span>
