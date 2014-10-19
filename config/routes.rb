@@ -7,7 +7,7 @@ Offline::Application.routes.draw do
     resources :issues
   end
 
-  root to: "users#welcome"
+  root "pages#welcome"
   get "login" => "users#login", :as => "login"
   get "signup" => "users#signup", :as => "signup"
   post "create_login_session" => "users#create_login_session"
