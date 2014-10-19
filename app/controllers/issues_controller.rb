@@ -28,7 +28,7 @@ class IssuesController < ApplicationController
 
   def show
     @issue = Issue.find(params[:id])
-    @comments = @issue.comments.reverse.to_a
+    @comments = @issue.comments.to_a
     # without to_a @comments.each will produce a empty comment object
   end
 
