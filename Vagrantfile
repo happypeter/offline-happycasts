@@ -66,6 +66,8 @@ cd /vagrant/
 bundle
 
 # FIXME: if run twice... should replace as a line
+
+cp config/database.yml.example config/database.yml
 sed -i -e 's/password:/password:\ 111111/' ./config/database.yml
 
 bundle exec rake db:create;bundle exec rake db:migrate
