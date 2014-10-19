@@ -4,3 +4,4 @@ log/*
 *.swp
 .ruby-version
 public/
+database.yml
